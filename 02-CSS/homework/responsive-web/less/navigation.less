@@ -1,1 +1,42 @@
 // Código de Nav acá
+@title-font: 6vh;
+@navbar-font: 1.5rem;
+@navbar-font-hover: 1.7rem;
+
+.title{
+    font-size: @title-font;
+    text-align: center;
+    padding: 12px 2px;
+    animation: flip 10s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+nav{
+    position: sticky;
+    top:0%;
+    background-color: @porcelain;
+    .flex-vertical();
+    ul {
+        list-style-type: none;
+        .flex-horizontal();
+        font-size: @navbar-font;
+        li{
+            padding: 1.5rem;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+        li a:hover{
+            transition: 750ms;
+            font-size: @navbar-font-hover;
+            color: red
+
+        }
+      }
+    
+}
