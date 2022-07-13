@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
+import styles from './card.module.css';
+
 
 export default function SearchBar({onSearch}) {
   return (
-    <form onSubmit={(e) => {
+    <form className={styles.searchBar} onSubmit={(e) => {
       e.preventDefault();
-      onSearch("Cairns");
+      onSearch(document.getElementById("searchInput").value);
     }}>
       <input
+        className={styles.textInput}
+        id="searchInput"
         type="text"
         placeholder="Ciudad..."
-      />
-      <input type="submit" value="Agregar" />
+      >
+      </input>
+      <button className={styles.addButton} type="submit" placeholder="Agregar">Agregar  </button>
+     
     </form>
   );
 }
