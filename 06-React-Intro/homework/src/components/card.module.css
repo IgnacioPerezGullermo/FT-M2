@@ -1,0 +1,71 @@
+.cardContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+.cityCard{
+    border: 1px solid black;
+    width: 31%;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(180, 180, 180);
+    margin: 1%;
+    box-shadow: 0.4rem 0.7rem 0.7rem rgb(122, 120, 120);
+}
+.btn{
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 2%;
+    top: 8%;
+    width: 1.5rem;
+    text-align: center; 
+    height: 1.5rem;
+    font-weight:500;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.cityName{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    position: relative;
+}
+.min{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: block;
+}
+.min span{
+    text-align: center;
+    padding: 7px 0;
+
+}
+.min h4{
+    text-align: center;
+    padding: 7px 0;
+    font-size: 1.3rem;
+    
+}
+.max{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: block;
+}
+.max span{
+    text-align: center;
+    padding: 7px 0;
+}
+.max h4{
+    text-align: center;
+    padding: 7px 0;
+    font-size: 1.3rem;
+}
+.img{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: block;
+}
